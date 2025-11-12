@@ -1,0 +1,116 @@
+import Dashboard from "layouts/dashboard";
+import Personnel from "layouts/Personnel";
+import Billing from "layouts/billing";
+import Payment from "layouts/Payment";
+import AccountSettings from "layouts/account-settings";
+import SignIn from "layouts/authentication/sign-in";
+import SignUp from "layouts/authentication/sign-up";
+import Menu from "layouts/menu";
+import MenuItemDetail from "layouts/menu/components/MenuItemDetail";
+import Customer from "layouts/customerTable";
+import TableManagement from "layouts/table-management";
+// @mui icons
+import Icon from "@mui/material/Icon";
+
+// Tạo mảng routes cơ bản không phụ thuộc vào trạng thái đăng nhập
+const routes = [
+  {
+    type: "collapse",
+    name: "Trang chủ",
+    key: "dashboard",
+    icon: <Icon fontSize="small">dashboard</Icon>,
+    route: "/dashboard",
+    component: <Dashboard />,
+    protected: true,
+  },
+  {
+    type: "collapse",
+    name: "Thực đơn",
+    key: "menu",
+    icon: <Icon fontSize="small">restaurant_menu</Icon>,
+    route: "/menu",
+    component: <Menu />,
+    protected: true,
+  },
+  {
+    type: "route",
+    key: "menu-item-detail",
+    route: "/menu/:id",
+    component: <MenuItemDetail />,
+    protected: true,
+  },
+  {
+    type: "collapse",
+    name: "Danh sách nhân viên",
+    key: "personnel",
+    icon: <Icon fontSize="small">manageaccounts</Icon>,
+    route: "/personnel",
+    component: <Personnel />,
+    protected: true,
+  },
+  {
+    type: "collapse",
+    name: "Khách hàng thân thiết",
+    key: "customer",
+    icon: <Icon fontSize="small">group</Icon>,
+    route: "/customer",
+    component: <Customer />,
+    protected: true,
+  },
+  {
+    type: "collapse",
+    name: "Quản lý bàn",
+    key: "table-management",
+    icon: <Icon fontSize="small">table_restaurant</Icon>,
+    route: "/table-management",
+    component: <TableManagement />,
+    protected: true,
+  },
+  {
+    type: "collapse",
+    name: "Quản lý hóa đơn",
+    key: "billing",
+    icon: <Icon fontSize="small">receipt</Icon>,
+    route: "/billing",
+    component: <Billing />,
+    protected: true,
+  },
+  {
+    type: "route",
+    name: "Tạo hóa đơn thanh toán",
+    key: "create-payment-bill",
+    route: "/create-payment-bill",
+    component: <Payment />,
+    protected: true,
+  },
+  {
+    type: "collapse",
+    name: "Tài khoản",
+    key: "account-settings",
+    icon: <Icon fontSize="small">person</Icon>,
+    route: "/account-settings",
+    component: <AccountSettings />,
+    protected: true,
+  },
+  // Thêm các routes đăng nhập/đăng ký vào mảng cơ bản
+  {
+    type: "collapse",
+    name: "Sign In",
+    key: "sign-in",
+    icon: <Icon fontSize="small">login</Icon>,
+    route: "/authentication/sign-in",
+    component: <SignIn />,
+    authRoute: true, // Đánh dấu là route xác thực
+  },
+  {
+    type: "collapse",
+    name: "Sign Up",
+    key: "sign-up",
+    icon: <Icon fontSize="small">assignment</Icon>,
+    route: "/authentication/sign-up",
+    component: <SignUp />,
+    authRoute: true, // Đánh dấu là route xác thực
+  },
+];
+
+export default routes;

@@ -1,0 +1,68 @@
+const menuData = [
+  {
+    id: 1,
+    name: "Phở bò",
+    price: "50,000 VND",
+    category: "food",
+    image: "https://via.placeholder.com/150",
+    ingredients: "Bánh phở, thịt bò, hành lá, nước dùng.",
+  },
+  {
+    id: 2,
+    name: "Bún chả",
+    price: "40,000 VND",
+    category: "food",
+    image: "https://via.placeholder.com/150",
+    ingredients: "Bún, thịt nướng, rau sống, nước chấm.",
+  },
+  {
+    id: 3,
+    name: "Cơm tấm",
+    price: "35,000 VND",
+    category: "food",
+    image: "https://via.placeholder.com/150",
+    ingredients: "Cơm tấm, sườn nướng, bì, chả, nước mắm.",
+  },
+  {
+    id: 4,
+    name: "Gà rán",
+    price: "60,000 VND",
+    category: "food",
+    image: "https://via.placeholder.com/150",
+    ingredients: "Gà, bột chiên giòn, dầu ăn.",
+  },
+  {
+    id: 5,
+    name: "Trà sữa",
+    price: "25,000 VND",
+    category: "drink",
+    image: "https://via.placeholder.com/150",
+    ingredients: "Trà, sữa, trân châu đường đen.",
+  },
+  {
+    id: 6,
+    name: "Cà phê sữa",
+    price: "20,000 VND",
+    category: "drink",
+    image: "https://via.placeholder.com/150",
+    ingredients: "Cà phê, sữa đặc, đá.",
+  },
+  {
+    id: 7,
+    name: "Nước cam",
+    price: "30,000 VND",
+    category: "drink",
+    image: "https://via.placeholder.com/150",
+    ingredients: "Cam tươi, đường, đá.",
+  },
+  {
+    id: 8,
+    name: "Sinh tố bơ",
+    price: "35,000 VND",
+    category: "drink",
+    image: "https://via.placeholder.com/150",
+    ingredients: "Bơ, sữa đặc, sữa tươi, đá.",
+  },
+];
+
+export default menuData;
